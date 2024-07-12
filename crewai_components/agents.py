@@ -4,7 +4,7 @@ from crewai_components.tools import github_tools, search_tool
 from langchain_groq import ChatGroq
 load_dotenv(override=True)
 
-llm = ChatGroq(temperature=0, model_name="Llama3-8b-8192")
+llm = ChatGroq(temperature=0.2, model_name="Llama3-8b-8192")
 
 #define agents
 
