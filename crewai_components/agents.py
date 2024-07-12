@@ -1,6 +1,6 @@
 from crewai import Agent, Task, Crew, Process
 from dotenv import load_dotenv
-from crewai_components import SerperDevTool
+from crewai_tools import SerperDevTool
 from tools import github_tools
 from langchain_groq import ChatGroq
 load_dotenv(override=True)

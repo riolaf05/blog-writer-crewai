@@ -1,7 +1,7 @@
 import os
 import openai
 from openai import OpenAI
-from crewai_components import SerperDevTool
+from crewai_tools import SerperDevTool
 from dotenv import load_dotenv
 load_dotenv(override=True)
 
