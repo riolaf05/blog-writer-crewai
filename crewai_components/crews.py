@@ -1,6 +1,6 @@
 from crewai import Crew, Process
-from crewai_tools.agents import planner, writer, editor, github_developer
-from crewai_tools.tasks import code_tutorial, code_snippets, research_task, plan, write, edit
+from crewai_components.agents import planner, writer, editor, github_developer
+from crewai_components.tasks import code_tutorial, code_snippets, research_task, plan, write, edit
 
 # Forming the tech-focused crew with some enhanced configurations
 crew = Crew(

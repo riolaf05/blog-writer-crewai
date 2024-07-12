@@ -1,8 +1,8 @@
-from crewai_tools import BaseTool
+from crewai_components import BaseTool
 import boto3
 import os
 import json
-from crewai_tools import GithubSearchTool
+from crewai_components import GithubSearchTool
 
 lambda_client = boto3.client('lambda', region_name=os.getenv('AWS_REGION'))
 function_name_1 = 'riassume-turnon-ec2-lambda'
