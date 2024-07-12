@@ -1,6 +1,7 @@
 from crewai_tools import GithubSearchTool
 import os
 
+print("REPOOO")
 print(os.getenv('GITHUB_REPO'))
 
 # Initialize the tool for semantic searches within a specific GitHub repository
