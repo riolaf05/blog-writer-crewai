@@ -15,8 +15,7 @@ It is suitable for performing complex specific tasks.
 
 2. Agents Prompt Engineering stands out as a crucial factor for enhancing task decomposition and planning.
 
-# Examples
+# References
 
-* [Getting started with CrewAI(https://docs.crewai.com/how-to/Creating-a-Crew-and-kick-it-off/#step-1-assemble-your-agents)
-* [CrewAI, Empower your AI Agent](https://nutdnuy.medium.com/crewai-empower-your-ai-agent-bd34fa8b26c9)
-* [Building an Agentic Workflow with CrewAI and Groq](https://www.analyticsvidhya.com/blog/2024/06/agentic-workflow-with-crewai-and-groq/)
+* [Getting started with CrewAI](https://docs.crewai.com/how-to/Creating-a-Crew-and-kick-it-off/#step-1-assemble-your-agents)
+* [Create a Blog Writer Multi-Agent System using Crewai and Ollama](https://medium.com/the-ai-forum/create-a-blog-writer-multi-agent-system-using-crewai-and-ollama-f47654a5e1cd)
