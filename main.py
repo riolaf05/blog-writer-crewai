@@ -8,4 +8,5 @@ load_dotenv(override=True)
 # Starting the task execution process with enhanced feedback
 inputs = {"topic":"Comparative study of LangGraph, Autogen and Crewai for building multi-agent system."}
 result = crew.kickoff(inputs=inputs)
-print(result)
+
+#write as a notion page

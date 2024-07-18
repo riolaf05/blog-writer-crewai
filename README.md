@@ -15,6 +15,10 @@ It is suitable for performing complex specific tasks.
 
 2. Agents Prompt Engineering stands out as a crucial factor for enhancing task decomposition and planning.
 
+# Next steps 
+
+* [Markdown-to-Notion](https://github.com/tryfabric/martian)
+
 # References
 
 * [Getting started with CrewAI](https://docs.crewai.com/how-to/Creating-a-Crew-and-kick-it-off/#step-1-assemble-your-agents)

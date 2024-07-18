@@ -1,6 +1,6 @@
 from crewai import Task
-from crewai_components.agents import researcher, writer, planner, github_developer, editor
-from crewai_components.tools import github_tools, search_tool
+from crewai_components.agents import writer, planner, editor
+# from crewai_components.tools import github_tools, search_tool
 from dotenv import load_dotenv
 load_dotenv(override=True)
 
@@ -81,7 +81,7 @@ edit = Task(
                  "grammatical errors and "
                  "alignment with the brand's voice."),
     expected_output="A well-written blog post in markdown format, "
-                    "ready for publication, "
+                    "ready for publication , write only the markdown without any other comments, "
                     "each section should have as many paragraphs are needed according to the list of extracted snippets and the information retrieved.",
     agent=editor
 )
