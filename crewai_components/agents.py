@@ -2,25 +2,32 @@ from crewai import Agent, Task, Crew, Process
 from dotenv import load_dotenv
 from crewai_components.tools import github_tools, search_tool
 from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 load_dotenv(override=True)
 
-llm = ChatGroq(temperature=0, model_name="Llama3-8b-8192")
+llm = ChatOpenAI(
+    model="gpt-4o",
+    temperature=0,
+    max_tokens=None,
+    timeout=None,
+    max_retries=2
+)
 
 #define agents
 
-researcher = Agent(
-  role='Senior Researcher',
-  goal='Uncover groundbreaking technologies in {topic}',
-  verbose=True,
-  memory=True,
-  backstory=(
-    "Driven by curiosity, you're at the forefront of"
-    "innovation, eager to explore and share knowledge that could change"
-    "the world."
-  ),
-  tools=[search_tool],
-  allow_delegation=True
-)
+# researcher = Agent(
+#   role='Senior Researcher',
+#   goal='Uncover groundbreaking technologies in {topic}',
+#   verbose=True,
+#   memory=True,
+#   backstory=(
+#     "Driven by curiosity, you're at the forefront of"
+#     "innovation, eager to explore and share knowledge that could change"
+#     "the world."
+#   ),
+#   tools=[search_tool],
+#   allow_delegation=True
+# )
 
 planner = Agent(
     role="Content Planner",
@@ -63,27 +70,27 @@ writer = Agent(
     verbose=True
 )
 
-github_developer = Agent(
-    role="Code Snippet Seeker",
-    goal="Understand the code inside a GitHub repo and extract useful snippet of code.",
-    backstory="You are Code Snippet Seeker, an AI agent created to bridge conceptual"
-              "knowledge and practical implementation. Born from a sophisticated neural"
-              "network, your mission is to find precise code snippets corresponding to"
-              "section titles provided by Content Planner."
+# github_developer = Agent(
+#     role="Code Snippet Seeker",
+#     goal="Understand the code inside a GitHub repo and extract useful snippet of code.",
+#     backstory="You are Code Snippet Seeker, an AI agent created to bridge conceptual"
+#               "knowledge and practical implementation. Born from a sophisticated neural"
+#               "network, your mission is to find precise code snippets corresponding to"
+#               "section titles provided by Content Planner."
 
-              "Content Planner structures articles on technical topics, and when a"
-              "section is ready, you take over. You dive into the given GitHub repository,"
-              "locating the exact lines of code that match the given section titles."
+#               "Content Planner structures articles on technical topics, and when a"
+#               "section is ready, you take over. You dive into the given GitHub repository,"
+#               "locating the exact lines of code that match the given section titles."
 
-              "With your understanding of context, programming languages, and coding"
-              "conventions, you ensure articles are both theoretically sound and"
-              "practically grounded. You are an invaluable asset, maintaining the bridge"
-              "between high-level concepts and real-world coding practices, and your"
-              "skills evolve through continuous learning.",
-    tools=[github_tools],
-    allow_delegation=False,
-    verbose=True
-)
+#               "With your understanding of context, programming languages, and coding"
+#               "conventions, you ensure articles are both theoretically sound and"
+#               "practically grounded. You are an invaluable asset, maintaining the bridge"
+#               "between high-level concepts and real-world coding practices, and your"
+#               "skills evolve through continuous learning.",
+#     tools=[github_tools],
+#     allow_delegation=False,
+#     verbose=True
+# )
 
 editor = Agent(
     role="Editor",
