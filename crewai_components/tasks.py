@@ -1,12 +1,8 @@
 from crewai import Task
 from crewai_components.agents import researcher, writer, planner, github_developer, editor
-from crewai_components.tools import TurnOnEC2
-from crewai_tools import SerperDevTool
+from crewai_components.tools import github_tools, search_tool
 from dotenv import load_dotenv
 load_dotenv(override=True)
-
-search_tool = SerperDevTool()
-turn_on_ec2_tool = TurnOnEC2()
 
 
 #Tasks 

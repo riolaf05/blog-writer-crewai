@@ -6,5 +6,6 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 # Starting the task execution process with enhanced feedback
-result = crew.kickoff(inputs={'topic': os.getenv["TOPIC"]})
+inputs = {"topic":"Comparative study of LangGraph, Autogen and Crewai for building multi-agent system."}
+result = crew.kickoff(inputs=inputs)
 print(result)
